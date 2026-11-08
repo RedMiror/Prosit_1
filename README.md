@@ -74,10 +74,4 @@ classDiagram
 | `IntersectionStatus` C enum | Scoped `enum class IntersectionStatus` |
 | `Segment2_intersect(s, r, p)` | `s.intersect(r, p)` |
 
-The geometry types own their coordinates privately and are copied by value,
-which replaces C pointer-based initialization and getters. The intersection
-routine retains the five status categories and exact zero determinant checks
-used by the C version. The collinear interval check handles containment and
-zero-length segments explicitly; the original routine could miss contained
-overlaps and divide by zero for degenerate segments. Floating-point tolerances
-are not introduced, so near-parallel classification remains exact as in C.
+
